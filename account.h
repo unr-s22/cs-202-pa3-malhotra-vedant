@@ -16,7 +16,7 @@ class Account {
     void makeWithdrawal(Money mon);
     void updateAmount();
 
-  explicit Account(Money mon);
+  //explicit Account(Money mon(int a, int b));
 
 };
 

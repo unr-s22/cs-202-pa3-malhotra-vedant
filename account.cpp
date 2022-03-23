@@ -11,6 +11,10 @@ void Account::makeWithdrawal(Money mon){
     moneyFlag = true;
 }
 
+
+//Account::Account(Money mon(int a, int b)){
+//}
+
 /*
 void Account::updateAmount(){
   bool operator<(const Money &rhs) const{
