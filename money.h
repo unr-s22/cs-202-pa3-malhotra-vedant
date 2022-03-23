@@ -3,7 +3,7 @@
 
 
 #include <iostream>
-//#include <osstream>
+#include <ostream>
 
 class Money {
     private:
@@ -48,7 +48,7 @@ class Money {
     }
 
 private:
-    friend std::ostream &operator<<(std::osstream &os, const Money &money);{
+    friend std::ostream &operator<<(std::ostream &os, const Money &money);{
         return os;
     }
 
