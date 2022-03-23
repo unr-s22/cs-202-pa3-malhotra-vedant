@@ -8,12 +8,16 @@
 class Account {
 
   private:
-    std::vector<Money> money;
+    std::vector<Money> moneyVe;
+    bool moneyFlag = false;
 
   public:
-    void makeDeposit();
-    void makeWithdrawal();
+    void makeDeposit(Money mon);
+    void makeWithdrawal(Money mon);
     void updateAmount();
+
+  explicit Account(Money mon);
+
 };
 
 #endif
