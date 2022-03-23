@@ -13,6 +13,7 @@ class Account {
   public:
     void makeDeposit();
     void makeWithdrawal();
+    void updateAmount();
 };
 
 #endif
