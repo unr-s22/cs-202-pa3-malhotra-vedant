@@ -5,8 +5,11 @@
 
 class Account {
 
-
-
+  private:
+  
+  public:
+    void makeDeposit();
+    void makeWithdrawal();
 };
 
 #endif
