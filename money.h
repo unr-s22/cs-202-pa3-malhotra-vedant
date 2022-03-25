@@ -22,7 +22,7 @@ class Money {
         friend bool &operator ==(Money const dollars, Money const cents);
         friend Money &operator +(Money const dollars, Money const cents);
         friend Money &operator -(Money const dollars, Money const cents);
-        friend std::ostream &operator<<(std::ostream &os, const Money &money);
+        friend std::ostream &operator<<(std::ostream &os, const Money &money);//
 
 
 

@@ -1,12 +1,12 @@
 #include <iostream>
 #include "account.h"
 
-void Account::makeDeposit(Money mon){
+void Account::makeDeposit(Money mon, Account acc){
     moneyVe.push_back(mon);
     moneyFlag = true;
 }
 
-void Account::makeWithdrawal(Money mon){
+void Account::makeWithdrawal(Money mon, Account acc){
     moneyVe.push_back(mon);
     moneyFlag = true;
 }
@@ -16,9 +16,9 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
     Money mon(acc);
 
     os << "Account Details\n--------------------------\n";
-    os << "Current Balance:" << mon;
+    os << "Current Balance:" << mon << "\n--------------------------\n";
     
-    
+
     
     //os << "Current Balance:$" << acc.m_cents << "\n--------------------------\n";
     //os << "Number of Deposits: " << acc.moneyVe.capacity();

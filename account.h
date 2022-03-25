@@ -13,8 +13,8 @@ class Account: public Money {
 
   public:
     explicit Account(int dollars, int cents) : Money(dollars, cents){};
-    void makeDeposit(Money mon);
-    void makeWithdrawal(Money mon);
+    void makeDeposit(Money mon, Account acc);
+    void makeWithdrawal(Money mon, Account acc);
     friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 
   //explicit Account(Money mon(int a, int b));
