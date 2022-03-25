@@ -15,7 +15,10 @@ int main(){
   //Money();
 
 std::cout << m << std::endl;
-
+//std::cout << "Current balance: " << balance << std::endl;
+//std::cout << "Deposit: " << deposit << std::endl;
+//std::cout << "Withdraw: " << withdrawal << std::endl;
+//std::cout << "New balance: " << updated << std::endl;
   //Account acc()
   
   return 0;
