@@ -14,6 +14,9 @@ int main(){
   Account withdrawal(201,34);
 
 std::cout << m << std::endl;
+
+  Account acc(300,23);
+std::cout << acc << std::endl;
   
   return 0;
 }

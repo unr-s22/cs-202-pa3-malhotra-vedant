@@ -12,15 +12,20 @@ void Account::makeWithdrawal(Money mon){
 }
 
 
-/*
 std::ostream &operator<<(std::ostream &os, const Account &acc){
+    Money mon(acc);
+
     os << "Account Details\n--------------------------\n";
-    os << "Current Balance:$" << Account(acc) << "\n--------------------------\n";
-    os << "Number of Deposits: " << acc.moneyVe.capacity();
+    os << "Current Balance:" << mon;
+    
+    
+    
+    //os << "Current Balance:$" << acc.m_cents << "\n--------------------------\n";
+    //os << "Number of Deposits: " << acc.moneyVe.capacity();
 
     return os;
 }
-*/
+
 //Account::Account(Money mon(int a, int b)){
 //}
 
