@@ -30,6 +30,16 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
     
     //os << "Current Balance:$" << acc.m_cents << "\n--------------------------\n";
     //os << "Number of Deposits: " << acc.moneyVe.capacity();
+    
+    //boolean idea
+    /*
+    if (balance == true){
+        update balance
+    }
+    else {
+        return old balance
+    }
+*/
 
     return os;
 }
