@@ -12,7 +12,7 @@ int main(){
   Account withdrawal(201,34);
 */  
   Money m(100,10);
-  //Money();
+  Account acc(300, 23);
 
 std::cout << m << std::endl;
 

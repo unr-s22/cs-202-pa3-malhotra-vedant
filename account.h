@@ -12,10 +12,10 @@ class Account: public Money {
     bool moneyFlag = false;
 
   public:
-    explicit Account(Money acc);
+    explicit Account(int dollars, int cents) : Money(dollars, cents){};
     void makeDeposit(Money mon);
     void makeWithdrawal(Money mon);
-    void updateAmount();
+    void getBalance(Account acc);
     friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 
   //explicit Account(Money mon(int a, int b));

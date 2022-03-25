@@ -12,6 +12,7 @@ void Account::makeWithdrawal(Money mon){
 }
 
 
+/*
 std::ostream &operator<<(std::ostream &os, const Account &acc){
     os << "Account Details\n--------------------------\n";
     os << "Current Balance:$" << Account(acc) << "\n--------------------------\n";
@@ -19,7 +20,7 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
 
     return os;
 }
-
+*/
 //Account::Account(Money mon(int a, int b)){
 //}
 
