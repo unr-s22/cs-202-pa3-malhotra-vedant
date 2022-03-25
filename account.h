@@ -10,11 +10,13 @@ class Account: public Money {
   private:
     std::vector<Money> moneyVe;
     bool moneyFlag = false;
+    int numDeposits = 0;
+    int numWithdrawls = 0;
 
   public:
     explicit Account(int dollars, int cents) : Money(dollars, cents){};
-    void makeDeposit(Money mon, Account acc);
-    void makeWithdrawal(Money mon, Account acc);
+    void makeDeposit(Money mon);
+    void makeWithdrawal(Money mon);
     friend std::ostream &operator<<(std::ostream &os, const Account &acc);
 
   //explicit Account(Money mon(int a, int b));
