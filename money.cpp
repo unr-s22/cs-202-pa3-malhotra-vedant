@@ -6,31 +6,31 @@
         m_cents = cents;
     }
 
-    Money &operator <(Money const dollars, Money const cents){
+    bool operator <(Money const one, Money const two){
 
     }
 
-    Money &operator >(Money const dollars, Money const cents){
+    bool operator >(Money const one, Money const two){
 
     }
 
-    Money &operator <=(Money const dollars, Money const cents){
+    bool operator <=(Money const one, Money const two){
 
     }
 
-    Money &operator >=(Money const dollars, Money const cents){
+    bool operator >=(Money const one, Money const two){
 
     }
 
-    bool &operator !=(Money const dollars, Money const cents){
+    bool operator !=(Money const one, Money const two){
 
     }
 
-    bool &operator ==(Money const dollars, Money const cents){
+    bool operator ==(Money const one, Money const two){
 
     }
 
-    Money operator +(const Money &one, const Money &two) {
+    Money operator +(Money const one, Money const two) {
         int oneA = one.m_dollars;
         int oneB = one.m_cents;
         int twoA = two.m_dollars;
