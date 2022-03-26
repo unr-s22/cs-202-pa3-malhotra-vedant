@@ -16,6 +16,17 @@ void Account::makeWithdrawal(Money mon){
 
 std::ostream &operator<<(std::ostream &os, const Account &acc){
 
+    Money initial = acc;
+    //bool moneyFlag = true;
+    if (acc.moneyFlag == true){
+        for each numDeposits
+        //maybe use money vectors
+        initial + vector[numDeposits]
+    }
+    else{ //moneyflag = false
+        return acc;
+    }
+
     os << "Account Details\n--------------------------\n";
     os << "Current Balance:" << Money(acc) << "\n--------------------------\n";
 
