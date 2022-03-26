@@ -12,8 +12,6 @@ class Account: public Money {
     bool moneyFlag = false;
     int numDeposits = 0;
     int numWithdrawls = 0;
-    int initialBalDol = 0;
-    int initialBalCent = 0;
 
     // add balance vars?
 

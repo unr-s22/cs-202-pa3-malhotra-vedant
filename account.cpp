@@ -21,7 +21,7 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
 
 
     if(acc.numDeposits != 0 || acc.numDeposits != 0){
-//seperate deposits later on
+
         os << "Number of Deposits: " << acc.numDeposits << "\n--------------------\n";
 
         for(int i = 1; i <= acc.numDeposits; i++){
