@@ -18,12 +18,14 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
 
     os << "Account Details\n--------------------------\n";
     os << "Current Balance:" << Money(acc) << "\n--------------------------\n";
-    os << "Number of Deposits: " << acc.numDeposits << "\n--------------------\n";
+
 
     if(acc.numDeposits != 0 || acc.numDeposits != 0){
+//seperate deposits later on
+        os << "Number of Deposits: " << acc.numDeposits << "\n--------------------\n";
 
         for(int i = 1; i <= acc.numDeposits; i++){
-            os << "(" << i << ") " << acc.moneyVe[i] << "\n";
+            os << "(" << i << ") " << acc.moneyVe[i - 1] << "\n";
         }
     }
 

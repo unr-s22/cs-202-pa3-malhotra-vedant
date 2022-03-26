@@ -3,7 +3,7 @@
 #include "account.h"
 
 int main(){
-
+/*
 // adding test
 Money m(100, 90);
 Money b(100, 20);
@@ -20,8 +20,7 @@ Money h(247, 73);
 Money newMon2 = g - h;
 std::cout << "New Money (subtracted) = " << newMon2 << std::endl;
 
-/*
-//commented out while we work on overloading 
+*/
   Account acc(300, 23);
   std::cout << acc << std::endl;
 
@@ -35,6 +34,6 @@ std::cout << "New Money (subtracted) = " << newMon2 << std::endl;
   acc.makeWithdrawal(Money(201, 34));
   std::cout << acc << std::endl;
   //amount after withdrawals are $800.25 
-  */
+  
   return 0;
 }
