@@ -30,12 +30,41 @@
 
     }
 
-    Money &operator +(Money one, Money two){
-        
+    Money operator +(const Money &one, const Money &two) {
+        int oneA = one.m_dollars;
+        int oneB = one.m_cents;
+        int twoA = two.m_dollars;
+        int twoB = two.m_cents;
+
+        int newDollar = oneA + twoA;
+        int newCent = oneB + twoB;
+
+        if (newCent >= 100) {
+            newDollar += 1;
+            newCent = newCent - 100;
+        }
+
+
+        return Money(newDollar, newCent);
     }
 
-    Money &operator -(Money const dollars, Money const cents){
+    Money operator -(Money const one, Money const two){
+        int oneA = one.m_dollars;
+        int oneB = one.m_cents;
+        int twoA = two.m_dollars;
+        int twoB = two.m_cents;
 
+        int newDollar = oneA - twoA;
+        int newCent = oneB - twoB;
+
+        // make sure to add checks for if balance won't work out (aka negative)!
+
+        if (newCent < 0) {
+            newDollar -= 1;
+            newCent = 100 + newCent;
+        }
+        
+        return Money(newDollar, newCent);
     }
 
     std::ostream &operator<<(std::ostream &os, const Money &money){

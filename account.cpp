@@ -27,15 +27,9 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
             os << "(" << i << ") " << acc.moneyVe[i] << "\n";
         }
     }
-    
-    //os << "Current Balance:$" << acc.m_cents << "\n--------------------------\n";
-    //os << "Number of Deposits: " << acc.moneyVe.capacity();
 
     return os;
 }
-
-//Account::Account(Money mon(int a, int b)){
-//}
 
 /*
 void Account::updateAmount(){
