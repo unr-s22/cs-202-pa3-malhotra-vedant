@@ -15,10 +15,9 @@ void Account::makeWithdrawal(Money mon){
 
 
 std::ostream &operator<<(std::ostream &os, const Account &acc){
-    Money mon(acc);
 
     os << "Account Details\n--------------------------\n";
-    os << "Current Balance:" << mon << "\n--------------------------\n";
+    os << "Current Balance:" << Money(acc) << "\n--------------------------\n";
     os << "Number of Deposits: " << acc.numDeposits << "\n--------------------\n";
 
     if(acc.numDeposits != 0 || acc.numDeposits != 0){
