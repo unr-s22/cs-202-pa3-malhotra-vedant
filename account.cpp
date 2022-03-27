@@ -50,5 +50,9 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
         }
     }
 
+    //boolean false by maybe doing something like this?
+    //if(acc.moneyDep.size() = 0){return acc;}
+    //if(acc.moneyWith.size() = 0){return acc;}
+    
     return os;
 }
