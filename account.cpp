@@ -2,50 +2,51 @@
 #include "account.h"
 
 void Account::makeDeposit(Money mon){
-    moneyVe.push_back(mon);
+    moneyDep.push_back(mon);
     moneyFlag = true;
-    numDeposits++;
 }
 
 void Account::makeWithdrawal(Money mon){
-    moneyVe.push_back(mon);
+    moneyWith.push_back(mon);
     moneyFlag = true;
-    numWithdrawls++;
 }
 
 
 std::ostream &operator<<(std::ostream &os, const Account &acc){
 
     Money initial = acc;
-    //bool moneyFlag = true;
     if (acc.moneyFlag == true){
-        for each numDeposits
-        //maybe use money vectors
-        initial + vector[numDeposits]
+        for(int count = 0; count < acc.moneyDep.size(); count++) {
+            initial = initial + acc.moneyDep[count];
+        }
+
+        for(int count = 0; count < acc.moneyWith.size(); count++) {
+            initial = initial - acc.moneyWith[count];
+        }
     }
-    else{ //moneyflag = false
-        return acc;
+    else{ 
+        initial = acc;
     }
 
     os << "Account Details\n--------------------------\n";
-    os << "Current Balance:" << Money(acc) << "\n--------------------------\n";
+    os << "Current Balance:" << initial << "\n--------------------------\n";
 
 
-    if(acc.numDeposits != 0 || acc.numDeposits != 0){
+    if(acc.moneyDep.size() != 0){
 
-        os << "Number of Deposits: " << acc.numDeposits << "\n--------------------\n";
+        os << "Number of Deposits: " << acc.moneyDep.size() << "\n--------------------\n";
+        for(int i = 0; i < acc.moneyDep.size(); i++){
+            os << "(" << i+1 << ") " << acc.moneyDep[i] << "\n";
+        }
+    } 
 
-        for(int i = 1; i <= acc.numDeposits; i++){
-            os << "(" << i << ") " << acc.moneyVe[i - 1] << "\n";
+    if(acc.moneyWith.size() != 0){
+        os << "--------------------------\n";
+        os << "Number of Withdrawals: " << acc.moneyWith.size() << "\n--------------------------\n";
+        for(int i = 0; i < acc.moneyWith.size(); i++){
+            os <<  "(" << i+1 << ") " << acc.moneyWith[i] << "\n";
         }
     }
 
     return os;
 }
-
-/*
-void Account::updateAmount(){
-  bool operator<(const Money &rhs) const{
-    return all_cents < rhs.all_cents;
-}
-*/

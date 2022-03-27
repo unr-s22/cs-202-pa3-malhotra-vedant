@@ -8,10 +8,9 @@
 class Account: public Money {
 
   private:
-    std::vector<Money> moneyVe;
+    std::vector<Money> moneyDep;
+    std::vector<Money> moneyWith;
     bool moneyFlag = false;
-    int numDeposits = 0;
-    int numWithdrawls = 0;
 
     // add balance vars?
 

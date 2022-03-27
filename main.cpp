@@ -27,6 +27,7 @@ std::cout << "New Money (subtracted) = " << newMon2 << std::endl;
   acc.makeDeposit(Money(200, 00));
   acc.makeDeposit(Money(300, 24));
   acc.makeDeposit(Money(501, 22));
+  
   std::cout << acc << std::endl;
   //deposit sum is $1301.69
 
