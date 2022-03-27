@@ -14,6 +14,8 @@ void Account::makeWithdrawal(Money mon){
 
 std::ostream &operator<<(std::ostream &os, const Account &acc){
 
+    //setprecision? with needed header, other ways to do it as well. have websites and such to fix decimal problem
+
     Money initial = acc;
     if (acc.moneyFlag == true){
         for(int count = 0; count < acc.moneyDep.size(); count++) {
