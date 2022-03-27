@@ -68,7 +68,13 @@
     }
 
     std::ostream &operator<<(std::ostream &os, const Money &money){
-        os << "$" << money.m_dollars << "." << money.m_cents;
+
+        if (money.m_cents == 00){
+            os << "$" << money.m_dollars << "." << money.m_cents << 0;
+        } else {
+            os << "$" << money.m_dollars << "." << money.m_cents;
+        }
+
         return os;
     }
 
