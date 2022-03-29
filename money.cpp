@@ -28,7 +28,19 @@
     }
 
     bool operator <=(Money const one, Money const two){
+        int oneA = one.m_dollars;
+        int oneB = one.m_cents;
+        int twoA = two.m_dollars;
+        int twoB = two.m_cents;
 
+        int newOne = oneA + oneB;
+        int newTwo = twoA + twoB;
+
+        if (newOne <= newTwo) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     bool operator >=(Money const one, Money const two){
