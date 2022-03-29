@@ -3,24 +3,40 @@
 #include "account.h"
 
 int main(){
+
 /*
-// adding test
-Money m(100, 90);
-Money b(100, 20);
-
-Money newMon = m + b;
-std::cout << "New Money (added)= " << newMon << std::endl;
-
-
-// subtracting test
-
-Money g(400, 35);
-Money h(247, 73);
-
-Money newMon2 = g - h;
-std::cout << "New Money (subtracted) = " << newMon2 << std::endl;
+        friend bool operator !=(Money const one, Money const two);
+         friend bool operator ==(Money const one, Money const two);
 */
 
+
+//All of the following are UNUSED operators to show that they work
+  Money mon1(200, 35);
+  Money mon2(4000, 1);
+
+  if(mon1 > mon2){
+      std::cout << "mon1 is greater" << std::endl;
+  } else {
+      std::cout << "mon2 is greater" << std::endl;
+  }
+
+  if(mon1 <= mon2){
+      std::cout << "mon1 is less than or equal to mon2" << std::endl;
+  } else {
+      std::cout << "mon2 is less than or equal to mon1" << std::endl;
+  }
+
+  if(mon1 >= mon2){
+      std::cout << "mon1 is greater than or equal to mon2" << std::endl;
+  } else {
+      std::cout << "mon2 is greater than or equal to mon1" << std::endl;
+  }
+
+
+
+// Printing Out Account 
+
+  std::cout << "--------------------------------------------------" << std::endl;
 
   Account acc(300, 23);
   std::cout << acc << std::endl;
