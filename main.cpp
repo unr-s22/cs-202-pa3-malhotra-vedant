@@ -4,12 +4,6 @@
 
 int main(){
 
-/*
-        friend bool operator !=(Money const one, Money const two);
-         friend bool operator ==(Money const one, Money const two);
-*/
-
-
 //All of the following are UNUSED operators to show that they work
   Money mon1(200, 35);
   Money mon2(4000, 1);
@@ -32,7 +26,17 @@ int main(){
       std::cout << "mon2 is greater than or equal to mon1" << std::endl;
   }
 
+ if(mon1 != mon2){
+      std::cout << "mon1 is not equal to mon2" << std::endl;
+  } else {
+      std::cout << "mon2 is not equal to mon1" << std::endl;
+  }
 
+   if(mon1 == mon2){
+      std::cout << "mon1 is equal to mon2" << std::endl;
+  } else {
+      std::cout << "mon2 is equal to mon1" << std::endl;
+  }
 
 // Printing Out Account 
 
