@@ -29,13 +29,13 @@ int main(){
  if(mon1 != mon2){
       std::cout << "mon1 is not equal to mon2" << std::endl;
   } else {
-      std::cout << "mon2 is not equal to mon1" << std::endl;
+      std::cout << "mon1 is equal to mon2" << std::endl;
   }
 
    if(mon1 == mon2){
       std::cout << "mon1 is equal to mon2" << std::endl;
   } else {
-      std::cout << "mon2 is equal to mon1" << std::endl;
+      std::cout << "mon1 is not equal to mon2" << std::endl;
   }
 
 // Printing Out Account 

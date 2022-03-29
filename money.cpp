@@ -1,151 +1,151 @@
 #include <iostream>
 #include "money.h"
 
-    Money::Money(int dollars, int cents){
-        m_dollars = dollars;
-        m_cents = cents;
+Money::Money(int dollars, int cents){
+     m_dollars = dollars;
+    m_cents = cents;
+}
+
+bool operator <(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne < newTwo) {
+        return true;
+    } else {
+        return false;
     }
-
-    bool operator <(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
-
-        if (newOne < newTwo) {
-            return true;
-        } else {
-            return false;
-        }
         
+}
+
+bool operator >(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne > newTwo) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator <=(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne <= newTwo) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator >=(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne >= newTwo) {
+        return true;
+    } else {
+       return false;
+    }
+}
+
+bool operator !=(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne != newTwo) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool operator ==(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newOne = oneA + oneB;
+    int newTwo = twoA + twoB;
+
+    if (newOne == newTwo) {
+        return true;
+    } else {
+           return false;
+    }
+}
+
+Money operator +(Money const one, Money const two) {
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
+
+    int newDollar = oneA + twoA;
+    int newCent = oneB + twoB;
+
+    if (newCent >= 100) {
+        newDollar += 1;
+        newCent = newCent - 100;
     }
 
-    bool operator >(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
+    return Money(newDollar, newCent);
+}
 
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
+Money operator -(Money const one, Money const two){
+    int oneA = one.m_dollars;
+    int oneB = one.m_cents;
+    int twoA = two.m_dollars;
+    int twoB = two.m_cents;
 
-        if (newOne > newTwo) {
-            return true;
-        } else {
-            return false;
-        }
+    int newDollar = oneA - twoA;
+    int newCent = oneB - twoB;
+
+    if (newCent < 0) {
+        newDollar -= 1;
+        newCent = 100 + newCent;
     }
-
-    bool operator <=(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
-
-        if (newOne <= newTwo) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    bool operator >=(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
-
-        if (newOne >= newTwo) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    bool operator !=(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
-
-        if (newOne != newTwo) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    bool operator ==(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newOne = oneA + oneB;
-        int newTwo = twoA + twoB;
-
-        if (newOne == newTwo) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    Money operator +(Money const one, Money const two) {
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newDollar = oneA + twoA;
-        int newCent = oneB + twoB;
-
-        if (newCent >= 100) {
-            newDollar += 1;
-            newCent = newCent - 100;
-        }
-
-
-        return Money(newDollar, newCent);
-    }
-
-    Money operator -(Money const one, Money const two){
-        int oneA = one.m_dollars;
-        int oneB = one.m_cents;
-        int twoA = two.m_dollars;
-        int twoB = two.m_cents;
-
-        int newDollar = oneA - twoA;
-        int newCent = oneB - twoB;
-
-        if (newCent < 0) {
-            newDollar -= 1;
-            newCent = 100 + newCent;
-        }
         
-        return Money(newDollar, newCent);
+    return Money(newDollar, newCent);
+}
+
+std::ostream &operator<<(std::ostream &os, const Money &money){
+
+    if (money.m_cents == 00){
+        os << "$" << money.m_dollars << "." << money.m_cents << 0;
+    } else {
+        os << "$" << money.m_dollars << "." << money.m_cents;
     }
 
-    std::ostream &operator<<(std::ostream &os, const Money &money){
+    return os;
+}
 
-        if (money.m_cents == 00){
-            os << "$" << money.m_dollars << "." << money.m_cents << 0;
-        } else {
-            os << "$" << money.m_dollars << "." << money.m_cents;
-        }
-
-        return os;
-    }
-
+Money::~Money(){}

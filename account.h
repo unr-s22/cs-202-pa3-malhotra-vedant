@@ -12,13 +12,13 @@ class Account: public Money {
     std::vector<Money> moneyWith;
     bool moneyFlag = false;
 
-    // add balance vars?
 
   public:
     explicit Account(int dollars, int cents) : Money(dollars, cents){};
     void makeDeposit(Money mon);
     void makeWithdrawal(Money mon);
     friend std::ostream &operator<<(std::ostream &os, Account &acc);
+    virtual ~Account();
 };
 
 #endif

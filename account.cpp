@@ -63,3 +63,5 @@ std::ostream &operator<<(std::ostream &os, Account &acc){
     acc.moneyFlag = false;
     return os;
 }
+
+Account::~Account(){}

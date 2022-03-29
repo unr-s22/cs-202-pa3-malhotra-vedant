@@ -24,7 +24,7 @@ class Money {
         friend Money operator -(Money const one, Money const two);
         friend std::ostream &operator<<(std::ostream &os, const Money &money);//
 
-
+        virtual ~Money();
 
 };
 
