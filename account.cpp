@@ -12,7 +12,7 @@ void Account::makeWithdrawal(Money mon){
 }
 
 
-std::ostream &operator<<(std::ostream &os, const Account &acc){
+std::ostream &operator<<(std::ostream &os, Account &acc){
 
     Money initial = acc;
     if (acc.moneyFlag == true){
@@ -48,9 +48,6 @@ std::ostream &operator<<(std::ostream &os, const Account &acc){
         }
     }
 
-    //boolean false by maybe doing something like this?
-    //if(acc.moneyDep.size() = 0){return acc;}
-    //if(acc.moneyWith.size() = 0){return acc;}
-
+    acc.moneyFlag = false;
     return os;
 }
