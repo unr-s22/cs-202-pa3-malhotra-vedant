@@ -21,7 +21,13 @@ std::ostream &operator<<(std::ostream &os, Account &acc){
         }
 
         for(int count = 0; count < acc.moneyWith.size(); count++) {
-            initial = initial - acc.moneyWith[count];
+
+            if(initial < acc.moneyWith[count]) {
+                os << "\nUnable to withdraw " << acc.moneyWith[count] << ". There is not enough money in your account!\n\n";
+            } else {
+                initial = initial - acc.moneyWith[count];
+            }
+
         }
     }
     else{ 
@@ -44,7 +50,13 @@ std::ostream &operator<<(std::ostream &os, Account &acc){
         os << "--------------------------\n";
         os << "Number of Withdrawals: " << acc.moneyWith.size() << "\n--------------------------\n";
         for(int i = 0; i < acc.moneyWith.size(); i++){
-            os <<  "(" << i+1 << ") " << acc.moneyWith[i] << "\n";
+            os <<  "(" << i+1 << ") " << acc.moneyWith[i];
+            if(initial < acc.moneyWith[i]) {
+                os << " (Invalid Withdrawl!!)\n";
+            } else {
+                os << "\n";
+            }
+
         }
     }
 
