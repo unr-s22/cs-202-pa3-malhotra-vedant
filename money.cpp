@@ -130,8 +130,6 @@
         int newDollar = oneA - twoA;
         int newCent = oneB - twoB;
 
-        // make sure to add checks for if balance won't work out (aka negative)!
-
         if (newCent < 0) {
             newDollar -= 1;
             newCent = 100 + newCent;
